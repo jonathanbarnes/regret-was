@@ -1,0 +1,142 @@
+@import 'mixin';
+@import 'utility';
+@import 'fonts';
+@import 'motion-container';
+
+$unit: calc(100vmin / 24);
+
+* {
+	box-sizing: border-box;
+	// user-select: none;
+	// cursor: default;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'freesansbold', 'helvetica', 'arial', 'sans-serif';
+}
+
+body {
+	overflow: hidden;
+}
+
+main {
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-content: center;
+	grid-template-columns: repeat(24, $unit);
+	grid-template-rows: repeat(24, $unit);
+
+	section {
+		background-color: rgba(0, 0, 0, 0);
+		// padding: $unit;
+		position: relative;
+
+		// > * {
+		// 	pointer-events: none;
+		// 	user-select: none;
+		// 	will-change: filter, opacity;
+		// 	transition: all 400ms ease;
+		// }
+
+		// &:hover {
+		// 	* {
+		// 		transition: all 0ms ease-in-out;
+		// 		filter: grayscale(1);
+		// 		opacity: 0.75;
+		// 		// opacity: 0.5;
+		// 	}
+		// }
+
+		h1,
+		h2,
+		h3,
+		p {
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
+
+h1 {
+	color: #9c153f;
+	@include lineHeight(2.8);
+	@include fontSize(5.65);
+	letter-spacing: -1vmin;
+	margin-left: -0.06em;
+}
+
+h2 {
+	color: #9c153f;
+	@include lineHeight(2);
+	@include fontSize(3);
+	letter-spacing: -0.5vmin;
+	margin-left: -0.06em;
+}
+
+h3 {
+	color: #000;
+	@include lineHeight(2);
+	@include fontSize(2);
+	letter-spacing: -0.7vmin;
+	border-bottom: 3px solid black;
+}
+
+h4 {
+	color: #000;
+	@include lineHeight(0.5);
+	@include fontSize(0.5);
+	letter-spacing: -0.11vmin;
+}
+
+p {
+	font-family: 'freesansoblique';
+	font-size: 0.8vmin;
+}
+
+img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+pre {
+	height: 100%;
+	width: 100%;
+	display: block;
+	margin: 0;
+	padding: 0;
+	white-space: pre-line;
+
+	> * {
+		display: block;
+	}
+}
+
+span {
+	font-family: 'Akkurat-Mono', 'monospace';
+	text-transform: uppercase;
+	line-height: 1.9vmin;
+	font-size: 1.16vmin;
+	letter-spacing: 0.03vmin;
+}
