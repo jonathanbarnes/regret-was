@@ -29,80 +29,247 @@ body {
 
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  text-align: center;
-  padding: 48px;
+  padding: 5vmin;
+}
+
+.header,
+.wrapper,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.header {
+  align-items: flex-start;
 }
 
 .wrapper {
-  height: 100%;
-  width: 100%;
-  max-height: 512px;
   display: flex;
-  position: relative;
-  font-size: 72px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 15vmin;
 }
 
-.image {
-  max-height: 100%;
-  max-width: 100%;
+.footer {
+  align-items: flex-end;
+}
+.footer__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__left,
+.footer__left {
+  align-items: flex-start;
+}
+
+.header__centre,
+.footer__centre {
+  align-items: center;
+}
+
+.header__right,
+.footer__right {
+  align-items: flex-end;
+}
+
+.date,
+.flower-wrapper {
+  position: absolute;
+  top: 50%;
+}
+
+.date {
+  left: 0;
+  transform-origin: 0% 0%;
+  transform: rotateZ(270deg) translateX(-50%);
+}
+
+.flower-wrapper {
+  transform-origin: 100% 100%;
+  transform: rotateZ(270deg) translateX(66.6%);
+  right: 0;
+}
+
+.flower-wrapper:hover .flower {
+  fill: #fff;
+}
+
+.flower-wrapper:hover::after {
+  opacity: 1;
+}
+
+.social-link {
+  color: black;
+}
+.social-link:hover {
+  color: #9c153f;
+}
+
+.flower {
+  height: 5vmin;
   display: block;
-  margin: auto;
+  position: relative;
+  z-index: 1;
+  //   transition: all 500ms ease;
+}
+
+.flower-wrapper::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  //   transition: all 500ms ease;
+  background-color: #9c153f;
+  mix-blend-mode: difference;
+}
+
+.velvet-wrapper {
+  cursor: pointer;
+}
+
+.velvet {
+  max-height: 50vmin;
+  max-width: 50vmin;
+  display: block;
   filter: grayscale(100) contrast(1.5) brightness(1.2);
   will-change: filter;
-  transition: all 500ms ease;
-  outline: 0px solid red;
+  transition: all 1s ease;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-.wrapper::before,
-.wrapper::after {
-  position: absolute;
-  transform: translateX(-50%) translateY(-50%);
-  line-height: 0.1em;
-  display: inline-block;
-  left: 50%;
-  color: #9c153f;
-  z-index: -1;
-}
-
-.wrapper::before {
-  content: "regret";
-  top: 0;
-}
-
-.wrapper::after {
-  content: "was";
-  bottom: 0;
-  font-size: 1.2em;
-}
-
-.image:hover {
+.velvet-wrapper:hover > .velvet {
   filter: grayscale(0) contrast(1) brightness(1);
 }
 
-.image:hover + .text {
-  opacity: 1;
-  //   transform: translateX(-50%) translateY(-50%);
-  transition-delay: 250ms;
+.index {
+  color: #000;
+  line-height: 1em;
+  font-size: 3em;
+  letter-spacing: -0.03em;
+  position: relative;
+  display: block;
 }
 
-.text {
-  margin: auto;
+.index::after {
+  content: "";
+  height: 0;
+  width: 100%;
+  border-bottom: 3px solid black;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  color: white;
-  font-family: "Akkurat-Mono", monospace;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  opacity: 0;
-  transition: all 500ms ease;
-  transform: translateX(-50%) translateY(-50%);
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  pointer-events: none;
+  bottom: 0;
+  left: 0;
 }
+
+.dead {
+  position: relative;
+  letter-spacing: -0.5px;
+}
+
+@keyframes fill {
+  0% {
+    width: 120%;
+  }
+
+  10% {
+    width: 0%;
+  }
+  100% {
+    width: 120%;
+  }
+}
+
+.dead::after {
+  content: "";
+  height: 4px;
+  width: 120%;
+  position: absolute;
+  background-color: black;
+  left: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dead:hover::after {
+  animation: fill 1s ease;
+}
+
+span {
+  font-family: "Akkurat-Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.titles {
+  font-size: 11px;
+}
+
+// .image--velvet {
+//   max-height: 100%;
+//   max-width: 100%;
+//   display: block;
+//   margin: auto;
+//   will-change: filter;
+//   transition: all 500ms ease;
+//   outline: 0px solid red;
+// }
+
+// .wrapper::before,
+// .wrapper::after {
+//   position: absolute;
+//   transform: translateX(-50%) translateY(-50%);
+//   line-height: 0.1em;
+//   display: inline-block;
+//   left: 50%;
+//   color: #9c153f;
+//   z-index: -1;
+// }
+
+// .wrapper::before {
+//   content: "regret";
+//   top: 0;
+// }
+
+// .wrapper::after {
+//   content: "was";
+//   bottom: 0;
+//   font-size: 1.2em;
+// }
+
+// .image:hover {
+//   filter: grayscale(0) contrast(1) brightness(1);
+// }
+
+// .image:hover + .text {
+//   opacity: 1;
+//   //   transform: translateX(-50%) translateY(-50%);
+//   transition-delay: 250ms;
+// }
+
+// .text {
+//   margin: auto;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   color: white;
+//   font-family: "Akkurat-Mono", monospace;
+//   font-size: 16px;
+//   text-transform: uppercase;
+//   letter-spacing: 2px;
+//   opacity: 0;
+//   transition: all 500ms ease;
+//   transform: translateX(-50%) translateY(-50%);
+//   perspective: 1000px;
+//   transform-style: preserve-3d;
+//   pointer-events: none;
+// }
