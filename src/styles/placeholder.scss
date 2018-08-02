@@ -116,7 +116,6 @@ body {
   display: block;
   position: relative;
   z-index: 1;
-  //   transition: all 500ms ease;
 }
 
 .flower-wrapper::after {
@@ -128,7 +127,6 @@ body {
   top: 0;
   left: 0;
   opacity: 0;
-  //   transition: all 500ms ease;
   background-color: #9c153f;
   mix-blend-mode: difference;
 }
@@ -138,12 +136,12 @@ body {
 }
 
 .velvet {
-  max-height: 50vmin;
-  max-width: 50vmin;
+  max-height: 75vmin;
+  max-width: 75vmin;
   display: block;
   filter: grayscale(100) contrast(1.5) brightness(1.2);
   will-change: filter;
-  transition: all 1s ease;
+  transition: all 750ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -173,34 +171,43 @@ body {
 .dead {
   position: relative;
   letter-spacing: -0.5px;
+  line-height: 1em;
+  padding: 0 10px 0 50px;
 }
 
 @keyframes fill {
   0% {
-    width: 120%;
+    width: 0;
+    left: 0;
   }
 
-  10% {
-    width: 0%;
+  50% {
+    width: 100%;
+    left: 0;
   }
+  51% {
+    left: initial;
+    right: 0;
+  }
+
   100% {
-    width: 120%;
+    width: 0;
+    right: 0;
   }
 }
 
 .dead::after {
   content: "";
   height: 4px;
-  width: 120%;
+  width: 0;
   position: absolute;
   background-color: black;
-  left: -10%;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .dead:hover::after {
-  animation: fill 1s ease;
+  animation: fill 750ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 span {
@@ -212,64 +219,17 @@ span {
 
 .titles {
   font-size: 11px;
+  text-align: right;
+  line-height: 1.4em;
 }
 
-// .image--velvet {
-//   max-height: 100%;
-//   max-width: 100%;
-//   display: block;
-//   margin: auto;
-//   will-change: filter;
-//   transition: all 500ms ease;
-//   outline: 0px solid red;
-// }
+.title {
+  display: block;
+}
 
-// .wrapper::before,
-// .wrapper::after {
-//   position: absolute;
-//   transform: translateX(-50%) translateY(-50%);
-//   line-height: 0.1em;
-//   display: inline-block;
-//   left: 50%;
-//   color: #9c153f;
-//   z-index: -1;
-// }
-
-// .wrapper::before {
-//   content: "regret";
-//   top: 0;
-// }
-
-// .wrapper::after {
-//   content: "was";
-//   bottom: 0;
-//   font-size: 1.2em;
-// }
-
-// .image:hover {
-//   filter: grayscale(0) contrast(1) brightness(1);
-// }
-
-// .image:hover + .text {
-//   opacity: 1;
-//   //   transform: translateX(-50%) translateY(-50%);
-//   transition-delay: 250ms;
-// }
-
-// .text {
-//   margin: auto;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   color: white;
-//   font-family: "Akkurat-Mono", monospace;
-//   font-size: 16px;
-//   text-transform: uppercase;
-//   letter-spacing: 2px;
-//   opacity: 0;
-//   transition: all 500ms ease;
-//   transform: translateX(-50%) translateY(-50%);
-//   perspective: 1000px;
-//   transform-style: preserve-3d;
-//   pointer-events: none;
-// }
+@media all and (min-width: 768px) {
+  .velvet {
+    max-height: 50vmin;
+    max-width: 50vmin;
+  }
+}
