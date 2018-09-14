@@ -1,1 +1,1 @@
-import "./styles/placeholder.scss";
+import "./styles/main.scss";

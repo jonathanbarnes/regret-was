@@ -1,39 +1,15 @@
 @font-face {
-	font-family: 'freesansmedium';
-	src: url('../media/fonts/freesans-webfont.woff2') format('woff2'),
-		url('../media/fonts/freesans-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "freesansbold";
+  src: url("../media/fonts/freesansbold-webfont.woff2") format("woff2"),
+    url("../media/fonts/freesansbold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'freesansbold';
-	src: url('../media/fonts/freesansbold-webfont.woff2') format('woff2'),
-		url('../media/fonts/freesansbold-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'freesansboldoblique';
-	src: url('../media/fonts/freesansboldoblique-webfont.woff2') format('woff2'),
-		url('../media/fonts/freesansboldoblique-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'freesansoblique';
-	src: url('../media/fonts/freesansoblique-webfont.woff2') format('woff2'),
-		url('../media/fonts/freesansoblique-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Akkurat-Mono';
-	src: url('../media/fonts/Akkurat-Mono.woff2') format('woff2'),
-		url('../media/fonts/Akkurat-Mono.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Akkurat-Mono";
+  src: url("../media/fonts/Akkurat-Mono.woff2") format("woff2"),
+    url("../media/fonts/Akkurat-Mono.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
