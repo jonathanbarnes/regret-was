@@ -171,7 +171,7 @@
 		"fast-deep-equal": "^2.0.1",
 		"fast-json-stable-stringify": "^2.0.0",
 		"figures": "^2.0.0",
-		"file-loader": "^1.1.11",
+		"file-loader": "^2.0.0",
 		"fill-range": "^4.0.0",
 		"find-cache-dir": "^1.0.0",
 		"find-up": "^2.1.0",
