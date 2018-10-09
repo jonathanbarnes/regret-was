@@ -15,6 +15,8 @@ body {
 }
 
 body {
+	will-change: opacity;
+	transition: opacity 1s ease-out 1s;
 	opacity: 1;
 	display: flex;
 	flex-direction: column;
@@ -139,7 +141,7 @@ body {
 
 .teaser:hover > .teaser__video,
 .velvet:hover > .velvet__image {
-	filter: grayscale(0) contrast(1) brightness(1);
+	filter: grayscale(0) contrast(1.5) brightness(1.2);
 }
 
 .index {

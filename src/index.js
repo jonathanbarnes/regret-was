@@ -1,2 +1,3 @@
 import "./styles/main.scss";
-import teaser from "./media/…a-death.mp4";
+import "./media/teaser.mp4";
+import "./media/teaser.gif";

@@ -52,7 +52,7 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.(mov|mp4)$/,
+				test: /\.mp4$/,
 				use: [
 					{
 						loader: "file-loader",
@@ -64,7 +64,7 @@ module.exports = {
 			},
 			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
-				use: ["url-loader?limit=10000", "img-loader"]
+				use: ["url-loader?limit=100000000", "img-loader"]
 			}
 		]
 	},
