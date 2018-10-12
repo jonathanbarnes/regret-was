@@ -130,8 +130,8 @@ body {
 
 .teaser__video,
 .velvet__image {
-	max-height: 75vmin;
-	max-width: 75vmin;
+	height: 60vmin;
+	width: auto;
 	display: block;
 	filter: grayscale(100) contrast(1.5) brightness(1.2);
 	will-change: filter;
