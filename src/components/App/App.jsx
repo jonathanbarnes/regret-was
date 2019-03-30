@@ -1,5 +1,6 @@
 import React from "react";
+import Router from "../Router/Router";
 
-const App = () => <div>regret was my only</div>;
+const App = () => <Router />;
 
 export default App;
