@@ -14,12 +14,15 @@ const Router = () => (
 							key={location.key}
 							classNames="router__route router__route-"
 							timeout={1000}
+							appear
 						>
-							<Switch location={location}>
-								{routes.map(({ id, ...props }) => (
-									<Route key={id} {...props} />
-								))}
-							</Switch>
+							<div>
+								<Switch location={location}>
+									{routes.map(({ id, ...props }) => (
+										<Route key={id} {...props} />
+									))}
+								</Switch>
+							</div>
 						</CSSTransition>
 					</TransitionGroup>
 				)}

@@ -2,18 +2,11 @@ import Media from "../routes/Media";
 
 export default [
 	{
-		id: "home",
+		id: "regret was",
 		path: "/",
-		exact: true,
-		strict: true,
-		linkText: "my only regret was"
-	},
-	{
-		id: "media",
-		path: "/media",
 		component: Media,
 		exact: true,
-		linkText: "media"
+		linkText: "regret was"
 	},
 	{
 		id: "contact",
@@ -21,5 +14,12 @@ export default [
 		component: Media,
 		exact: true,
 		linkText: "contact"
+	},
+	{
+		id: "live",
+		path: "/live",
+		component: Media,
+		exact: true,
+		linkText: "live"
 	}
 ];

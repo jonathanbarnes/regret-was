@@ -1,0 +1,12 @@
+.slider {
+	height: 100%;
+
+	&__background {
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		position: relative;
+		z-index: -1;
+	}
+}
