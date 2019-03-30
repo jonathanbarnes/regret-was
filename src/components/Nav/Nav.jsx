@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { routes } from "../../config/";
+import { routes, externalLinks } from "../../config/";
 
 const Nav = () => {
 	return (
@@ -11,10 +11,17 @@ const Nav = () => {
 					to={path}
 					className="nav__link"
 					activeClassName="nav__link--active"
+					exact
+					strict
 				>
 					{linkText}
 				</NavLink>
 			))}
+			{/* {externalLinks.map(({ href, text }) => (
+				<a className="nav__link" href={href}>
+					{text}
+				</a>
+			))} */}
 		</div>
 	);
 };

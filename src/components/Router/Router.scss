@@ -1,0 +1,14 @@
+.router {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	&__wrapper,
+	&__nav {
+		padding: 2vmin;
+	}
+
+	&__wrapper {
+		flex: 1;
+	}
+}

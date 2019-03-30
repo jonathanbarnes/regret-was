@@ -1,0 +1,30 @@
+:root {
+	--timing: 250ms;
+	--func: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	--transitionOpacity: opacity var(--timing) ease;
+	--transitionTransform: transform var(--timing) var(--func);
+}
+
+.nav {
+	font-size: 5vmin;
+	font-family: "freesansbold";
+	line-height: 1;
+
+	&__link {
+		margin-bottom: 2vmin;
+		display: table;
+		color: #000;
+		text-decoration: none;
+		opacity: 0.5;
+		transition: var(--transitionOpacity);
+
+		&:hover,
+		&--active {
+			opacity: 1;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
