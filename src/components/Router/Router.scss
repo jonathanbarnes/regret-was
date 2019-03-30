@@ -1,14 +1,47 @@
 .router {
 	height: 100%;
-	display: flex;
-	flex-direction: column;
-
-	&__wrapper,
-	&__nav {
-		padding: 2vmin;
-	}
 
 	&__wrapper {
-		flex: 1;
+		height: 100%;
+		position: relative;
+	}
+
+	&__route {
+		padding: 2vmin;
+		height: 100%;
+		width: 100%;
+		position: relative;
+		border: 5px solid red;
+		transition: opacity 1s ease;
+
+		&--enter {
+			opacity: 0;
+		}
+
+		&--enter-active {
+			opacity: 1;
+			transition: opacity 250ms ease 500ms;
+		}
+
+		&--exit {
+			opacity: 1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+
+		&--exit-active {
+			opacity: 0;
+			transition: opacity 250ms ease;
+		}
+	}
+
+	&__nav {
+		padding: 2vmin;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
 	}
 }

@@ -12,7 +12,7 @@ const Router = () => (
 					<TransitionGroup className="router__wrapper">
 						<CSSTransition
 							key={location.key}
-							classNames="fade"
+							classNames="router__route router__route-"
 							timeout={1000}
 						>
 							<Switch location={location}>

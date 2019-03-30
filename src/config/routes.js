@@ -6,7 +6,7 @@ export default [
 		path: "/",
 		exact: true,
 		strict: true,
-		linkText: "home"
+		linkText: "my only regret was"
 	},
 	{
 		id: "media",

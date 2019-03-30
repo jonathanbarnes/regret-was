@@ -1,6 +1,4 @@
 :root {
-	--timing: 250ms;
-	--func: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 	--transitionOpacity: opacity var(--timing) ease;
 	--transitionTransform: transform var(--timing) var(--func);
 }
@@ -11,12 +9,13 @@
 	line-height: 1;
 
 	&__link {
-		margin-bottom: 2vmin;
+		margin-bottom: 1vmin;
 		display: table;
 		color: #000;
 		text-decoration: none;
 		opacity: 0.5;
 		transition: var(--transitionOpacity);
+		letter-spacing: -0.04em;
 
 		&:hover,
 		&--active {
