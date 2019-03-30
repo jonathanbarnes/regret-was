@@ -1,14 +1,17 @@
+import velvet from "../media/velvet.jpg";
+import vase from "../media/vase.jpg";
+
 export default [
 	{
 		id: "a-death",
 		title: "…a death",
 		videoUrl: "",
-		imageUrl: "https://source.unsplash.com/960x1080?nature"
+		imageUrl: velvet
 	},
 	{
 		id: "unfamiliar",
 		title: "…unfamiliar",
 		videoUrl: "",
-		imageUrl: "https://source.unsplash.com/960x1080?architecture"
+		imageUrl: vase
 	}
 ];
