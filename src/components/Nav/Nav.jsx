@@ -22,6 +22,7 @@ const Nav = () => {
 					className="nav__link nav__link--external"
 					href={href}
 					target="_blank"
+					rel="noopener noreferrer"
 				>
 					{text}
 				</a>

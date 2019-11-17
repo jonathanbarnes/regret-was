@@ -8,6 +8,9 @@ body,
 *::before,
 *::after {
 	box-sizing: border-box;
+	font-family: "freesansbold", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		"Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
 }
 
 body {
@@ -19,6 +22,14 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	letter-spacing: -0.08em;
+}
+
+h1,
+h2,
+p,
+a,
+span {
+	font-family: inherit;
 }
 
 h1 {

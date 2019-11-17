@@ -15,6 +15,7 @@ const Live = props => (
 							className="live__link"
 							href={show.link}
 							target="_blank"
+							rel="noopener noreferrer"
 						>
 							tickets / event
 						</a>

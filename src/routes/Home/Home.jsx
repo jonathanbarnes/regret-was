@@ -12,7 +12,7 @@ import flower from "../../media/flower.svg";
 
 const Image = props => (
 	<LazyLoad once offset={100}>
-		<img {...props} />
+		<img {...props} alt="" />
 	</LazyLoad>
 );
 
