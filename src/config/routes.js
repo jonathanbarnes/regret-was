@@ -1,4 +1,4 @@
-import { Home } from "../routes";
+import { Home, Live } from "../routes";
 
 export default [
 	{
@@ -11,15 +11,8 @@ export default [
 	{
 		id: "live",
 		path: "/live",
-		component: Home,
+		component: Live,
 		exact: true,
 		linkText: "live"
-	},
-	{
-		id: "contact",
-		path: "/contact",
-		component: Home,
-		exact: true,
-		linkText: "contact"
 	}
 ];

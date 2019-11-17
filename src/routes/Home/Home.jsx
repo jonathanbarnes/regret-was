@@ -1,15 +1,35 @@
 import React from "react";
 import Page from "../../components/Page";
+import Embed from "../../components/Embed";
+import LazyLoad from "react-lazyload";
+
 import * as blur from "../../media/blur-rip-off";
+import velvet from "../../media/velvet.jpg";
+import vase from "../../media/vase.jpg";
+import promo1 from "../../media/promo1.jpg";
+import red from "../../media/red.jpg";
+import flower from "../../media/flower.svg";
+
+const Image = props => (
+	<LazyLoad once offset={100}>
+		<img {...props} />
+	</LazyLoad>
+);
 
 const Home = props => (
 	<Page className="home">
-		<h1>MY ONLY REGRET WAS</h1>
-		<h2>my only regret was</h2>
-		<img src={blur.tom} />
-		<img src={blur.sam} />
-		<img src={blur.olly} />
-		<img src={blur.jon} />
+		<Image src={promo1} />
+		<Image src={blur.tom} />
+		<Image src={blur.sam} />
+		<Image src={blur.olly} />
+		<Image src={blur.jon} />
+		<Embed videoId="tHFBpdO9_Dw" />
+		<Image src={red} />
+		<Embed videoId="gQSVydDIgyc" />
+		<Image src={vase} />
+		<Embed videoId="loIVrJN3pYA" />
+		<Image src={velvet} />
+		<Image src={flower} />
 	</Page>
 );
 

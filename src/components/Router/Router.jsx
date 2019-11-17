@@ -1,6 +1,6 @@
 import React from "react";
 import { routes } from "../../config/";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Nav from "../Nav";
 
@@ -21,15 +21,14 @@ const Router = () => (
 									{routes.map(({ id, ...props }) => (
 										<Route key={id} {...props} />
 									))}
+									<Redirect to="/"></Redirect>
 								</Switch>
 							</div>
 						</CSSTransition>
 					</TransitionGroup>
 				)}
 			/>
-			<div className="router__nav">
-				<Nav />
-			</div>
+			<Nav />
 		</BrowserRouter>
 	</div>
 );

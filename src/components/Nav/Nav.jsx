@@ -18,7 +18,11 @@ const Nav = () => {
 				</NavLink>
 			))}
 			{externalLinks.map(({ href, text }) => (
-				<a className="nav__link" href={href}>
+				<a
+					className="nav__link nav__link--external"
+					href={href}
+					target="_blank"
+				>
 					{text}
 				</a>
 			))}

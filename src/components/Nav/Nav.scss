@@ -4,7 +4,7 @@
 }
 
 .nav {
-	padding: 2vmin;
+	padding: 4vmin 4vmin 3vmin;
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -12,20 +12,24 @@
 	mix-blend-mode: exclusion;
 
 	&__link {
-		display: table;
+		display: block;
 		color: #fff;
 		text-decoration: none;
-		opacity: 0.5;
 		transition: var(--transitionOpacity);
 		letter-spacing: -0.04em;
 		mix-blend-mode: inherit;
 		line-height: 1;
 		font-family: "freesansbold";
-		font-size: 8vmin;
+		font-size: calc(16px + 8vmin);
 
-		&:hover,
 		&--active {
-			opacity: 1;
+			background-color: black;
+		}
+
+		&--external {
+			&::after {
+				content: "\2192";
+			}
 		}
 
 		&:last-of-type {
