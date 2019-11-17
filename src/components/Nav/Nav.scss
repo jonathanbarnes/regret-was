@@ -4,18 +4,24 @@
 }
 
 .nav {
-	font-size: 3vmin;
-	font-family: "freesansbold";
-	line-height: 1;
+	padding: 2vmin;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	mix-blend-mode: exclusion;
 
 	&__link {
-		margin-bottom: 0.5vmin;
 		display: table;
-		color: #000;
+		color: #fff;
 		text-decoration: none;
 		opacity: 0.5;
 		transition: var(--transitionOpacity);
 		letter-spacing: -0.04em;
+		mix-blend-mode: inherit;
+		line-height: 1;
+		font-family: "freesansbold";
+		font-size: 8vmin;
 
 		&:hover,
 		&--active {

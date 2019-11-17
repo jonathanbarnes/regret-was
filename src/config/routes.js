@@ -1,32 +1,25 @@
-import Media from "../routes/Media";
+import { Home } from "../routes";
 
 export default [
 	{
-		id: "regret-was",
+		id: "home",
 		path: "/",
-		component: Media,
+		component: Home,
 		exact: true,
-		linkText: "regret was"
-	},
-	{
-		id: "this-room-and-you",
-		path: "/thisroomandyou",
-		component: Media,
-		exact: true,
-		linkText: "this room & you"
-	},
-	{
-		id: "contact",
-		path: "/contact",
-		component: Media,
-		exact: true,
-		linkText: "contact"
+		linkText: "home"
 	},
 	{
 		id: "live",
 		path: "/live",
-		component: Media,
+		component: Home,
 		exact: true,
 		linkText: "live"
+	},
+	{
+		id: "contact",
+		path: "/contact",
+		component: Home,
+		exact: true,
+		linkText: "contact"
 	}
 ];

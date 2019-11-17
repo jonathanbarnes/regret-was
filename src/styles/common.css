@@ -1,9 +1,3 @@
-html,
-body,
-#root {
-	height: 100%;
-}
-
 *,
 *::before,
 *::after {
@@ -13,9 +7,20 @@ body,
 body {
 	margin: 0;
 	padding: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+	font-family: "freesansbold", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		"Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
 		"Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	letter-spacing: -0.08em;
+}
+
+h1 {
+	font-size: 4em;
+	line-height: 0.8;
+}
+
+h2 {
+	font-size: 2.8em;
+	line-height: 0.8;
 }

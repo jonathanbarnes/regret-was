@@ -17,11 +17,11 @@ const Nav = () => {
 					{linkText}
 				</NavLink>
 			))}
-			{/* {externalLinks.map(({ href, text }) => (
+			{externalLinks.map(({ href, text }) => (
 				<a className="nav__link" href={href}>
 					{text}
 				</a>
-			))} */}
+			))}
 		</div>
 	);
 };

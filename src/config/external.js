@@ -1,14 +1,10 @@
 export default [
 	{
 		href: "",
-		text: "merch"
-	},
-	{
-		href: "",
-		text: "live"
-	},
-	{
-		href: "",
 		text: "blog"
+	},
+	{
+		href: "",
+		text: "shop"
 	}
 ];
