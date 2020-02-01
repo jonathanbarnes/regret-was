@@ -1,0 +1,6 @@
+:root {
+	--timing: 500ms;
+	--func: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	--margin: 2vmin;
+	--padding: 2vmin;
+}

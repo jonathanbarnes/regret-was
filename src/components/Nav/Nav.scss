@@ -1,0 +1,40 @@
+:root {
+	--transitionOpacity: opacity var(--timing) ease;
+	--transitionTransform: transform var(--timing) var(--func);
+}
+
+.nav {
+	padding: 4vmin 4vmin 3vmin;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	mix-blend-mode: exclusion;
+
+	&__link {
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		transition: var(--transitionOpacity);
+		letter-spacing: -0.04em;
+		mix-blend-mode: inherit;
+		line-height: 1;
+		font-family: "freesansbold";
+		font-size: calc(16px + 8vmin);
+
+		&--active {
+			background-color: black;
+		}
+
+		&--external {
+			&::after {
+				content: "\2192";
+				font-size: 0.8em;
+			}
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+.router {
+	&__wrapper {
+		position: relative;
+	}
+
+	&__route {
+		width: 100%;
+		position: relative;
+
+		&--enter {
+			opacity: 0;
+		}
+
+		&--enter-active {
+			opacity: 1;
+			transition: opacity 500ms ease 500ms;
+		}
+
+		&--exit {
+			opacity: 1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+
+		&--exit-active {
+			opacity: 0;
+			transition: opacity 5s ease 1s;
+		}
+	}
+}

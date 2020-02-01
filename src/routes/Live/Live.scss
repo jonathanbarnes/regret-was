@@ -1,0 +1,28 @@
+.live {
+	&__list {
+		width: 100%;
+		max-width: 500px;
+		margin: 0;
+		list-style: none;
+		padding: 0;
+	}
+
+	&__list-item {
+		margin: 0 0 calc(10 * var(--margin));
+	}
+
+	&__date {
+		margin: 0;
+	}
+
+	&__city,
+	&__venue {
+		margin: 0 0 calc(var(--margin) * 0.5);
+	}
+
+	&__link {
+		&::after {
+			content: " \2192";
+		}
+	}
+}
