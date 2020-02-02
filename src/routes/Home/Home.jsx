@@ -9,6 +9,7 @@ import vase from "../../media/vase.jpg";
 import promo1 from "../../media/promo1.jpg";
 import red from "../../media/red.jpg";
 import flower from "../../media/flower.svg";
+import swiss from "../../media/if-you-remember-me.jpg";
 
 const Image = props => (
 	<LazyLoad once offset={100}>
@@ -19,6 +20,7 @@ const Image = props => (
 const Home = props => (
 	<Page className="home">
 		<Image src={promo1} />
+		<Image src={swiss} />
 		<Image src={blur.tom} />
 		<Image src={blur.sam} />
 		<Image src={blur.olly} />
